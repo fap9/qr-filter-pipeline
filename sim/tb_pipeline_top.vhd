@@ -27,9 +27,9 @@ architecture sim of tb_axis_filter_top is
   constant CLK_PER : time := 10 ns; -- 100 MHz
 
   -- Backpressure: 0 = tready always 1, otherwise percentage of stall cycles
-  constant BP_PERCENT : integer := 0; -- 30
+  constant BP_PERCENT : integer := 30;
   -- Gaps in the source stream, percentage of cycles with tvalid = '0'
-  constant GAP_PERCENT : integer := 0; -- 0
+  constant GAP_PERCENT : integer := 15;
 
   -- pixels that are checked strictly: distance >= 2 from every border
   constant GUARD : integer := 2;
